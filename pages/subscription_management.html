@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription Management - AI Nexus Pro</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Manage your AI Nexus Pro subscription with transparent billing, usage analytics, and cost savings calculator." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fainexusp5621back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <nav class="bg-surface shadow-card border-b border-border-light sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                            <circle cx="16" cy="12" r="3" fill="white"/>
+                            <path d="M16 16l-4 4h8l-4-4z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-primary">AI Nexus Pro</h1>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Home</a>
+                        <a href="ai_comparison_studio.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">AI Studio</a>
+                        <a href="unified_dashboard.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Dashboard</a>
+                        <a href="automation_studio.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Automation</a>
+                        <a href="subscription_management.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">Pricing</a>
+                        <a href="knowledge_base.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Knowledge Base</a>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Sign In</button>
+                    <button class="btn-primary">Start Free Trial</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-text-secondary hover:text-primary p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-primary-50 to-accent-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold text-primary mb-4">Subscription Management</h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Transparent billing, detailed usage analytics, and powerful cost optimization tools to maximize your AI investment
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Plan Overview -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Current Plan Card -->
+                <div class="lg:col-span-2">
+                    <div class="card p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div>
+                                <h2 class="text-2xl font-bold text-primary mb-2">Professional Plan</h2>
+                                <p class="text-text-secondary">Active since March 15, 2025</p>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-3xl font-bold text-primary">$29</div>
+                                <div class="text-text-secondary">/month</div>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <div class="space-y-4">
+                                <h3 class="font-semibold text-text-primary">Plan Features</h3>
+                                <div class="space-y-3">
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span class="text-text-primary">Unlimited ChatGPT, Claude & Gemini</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span class="text-text-primary">Advanced automation workflows</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span class="text-text-primary">Priority support</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span class="text-text-primary">API access included</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <h3 class="font-semibold text-text-primary">Usage Limits</h3>
+                                <div class="space-y-3">
+                                    <div>
+                                        <div class="flex justify-between text-sm mb-1">
+                                            <span class="text-text-secondary">Monthly Queries</span>
+                                            <span class="text-text-primary">2,847 / 5,000</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2">
+                                            <div class="bg-accent h-2 rounded-full" style="width: 57%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-sm mb-1">
+                                            <span class="text-text-secondary">Automation Runs</span>
+                                            <span class="text-text-primary">143 / 500</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2">
+                                            <div class="bg-success h-2 rounded-full" style="width: 29%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-sm mb-1">
+                                            <span class="text-text-secondary">API Calls</span>
+                                            <span class="text-text-primary">1,234 / 10,000</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2">
+                                            <div class="bg-warning h-2 rounded-full" style="width: 12%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="btn-primary">Upgrade Plan</button>
+                            <button class="btn-secondary">Modify Plan</button>
+                            <button class="text-text-secondary hover:text-primary px-4 py-2 transition-colors">Cancel Subscription</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cost Savings Summary -->
+                <div class="space-y-6">
+                    <div class="card p-6">
+                        <h3 class="text-lg font-semibold text-primary mb-4">Monthly Savings</h3>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-success mb-2">$31</div>
+                            <p class="text-text-secondary mb-4">vs. individual subscriptions</p>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Individual cost:</span>
+                                    <span class="text-text-primary">$60</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">AI Nexus Pro:</span>
+                                    <span class="text-text-primary">$29</span>
+                                </div>
+                                <div class="border-t border-border pt-2">
+                                    <div class="flex justify-between font-semibold">
+                                        <span class="text-text-primary">You save:</span>
+                                        <span class="text-success">52%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-6">
+                        <h3 class="text-lg font-semibold text-primary mb-4">Next Billing</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Date:</span>
+                                <span class="text-text-primary">April 15, 2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Amount:</span>
+                                <span class="text-text-primary font-semibold">$29.00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Method:</span>
+                                <span class="text-text-primary">•••• 4242</span>
+                            </div>
+                        </div>
+                        <button class="btn-accent w-full mt-4">Update Payment Method</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Analytics -->
+    <section class="py-12 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-primary mb-4">Usage Analytics</h2>
+                <p class="text-text-secondary">Detailed insights into your AI platform usage patterns and trends</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <!-- AI Model Usage Chart -->
+                <div class="card p-6">
+                    <h3 class="text-lg font-semibold text-primary mb-4">AI Model Usage (Last 30 Days)</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-4 h-4 bg-green-500 rounded-full"></div>
+                                <span class="text-text-primary">ChatGPT</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold text-text-primary">1,247 queries</div>
+                                <div class="text-sm text-text-secondary">44%</div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 44%"></div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-4 h-4 bg-orange-500 rounded-full"></div>
+                                <span class="text-text-primary">Claude</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold text-text-primary">892 queries</div>
+                                <div class="text-sm text-text-secondary">31%</div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-orange-500 h-2 rounded-full" style="width: 31%"></div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-4 h-4 bg-blue-500 rounded-full"></div>
+                                <span class="text-text-primary">Gemini</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold text-text-primary">708 queries</div>
+                                <div class="text-sm text-text-secondary">25%</div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 25%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Peak Usage Times -->
+                <div class="card p-6">
+                    <h3 class="text-lg font-semibold text-primary mb-4">Peak Usage Times</h3>
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs text-text-secondary mb-2">
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                            <div>Sun</div>
+                        </div>
+                        <div class="grid grid-cols-7 gap-1">
+                            <div class="h-8 bg-accent-200 rounded"></div>
+                            <div class="h-12 bg-accent-400 rounded"></div>
+                            <div class="h-10 bg-accent-300 rounded"></div>
+                            <div class="h-14 bg-accent-500 rounded"></div>
+                            <div class="h-11 bg-accent-300 rounded"></div>
+                            <div class="h-6 bg-accent-100 rounded"></div>
+                            <div class="h-4 bg-accent-100 rounded"></div>
+                        </div>
+                        <div class="mt-4 space-y-2">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-text-secondary">Busiest day:</span>
+                                <span class="text-text-primary font-semibold">Thursday</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-text-secondary">Peak hours:</span>
+                                <span class="text-text-primary font-semibold">9-11 AM, 2-4 PM</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-text-secondary">Avg. daily queries:</span>
+                                <span class="text-text-primary font-semibold">95</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Utilization -->
+            <div class="card p-6">
+                <h3 class="text-lg font-semibold text-primary mb-6">Feature Utilization</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="text-2xl font-bold text-primary">2,847</div>
+                        <div class="text-sm text-text-secondary">AI Queries</div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div class="text-2xl font-bold text-primary">143</div>
+                        <div class="text-sm text-text-secondary">Automations</div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-warning-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div class="text-2xl font-bold text-primary">67</div>
+                        <div class="text-sm text-text-secondary">Comparisons</div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div class="text-2xl font-bold text-primary">1,234</div>
+                        <div class="text-sm text-text-secondary">API Calls</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Comparison -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Choose Your Perfect Plan</h2>
+                <p class="text-xl text-text-secondary">Flexible pricing that grows with your AI needs</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="card p-8 relative">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Starter</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$13</div>
+                        <div class="text-text-secondary">/month</div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">1,000 queries/month</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">All 3 AI models</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">Basic automations</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">Email support</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-secondary w-full">Choose Starter</button>
+                </div>
+
+                <!-- Professional Plan (Current) -->
+                <div class="card p-8 relative border-2 border-accent">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">Current Plan</span>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Professional</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$29</div>
+                        <div class="text-text-secondary">/month</div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">5,000 queries/month</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">Advanced automations</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">Priority support</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">API access</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary w-full">Current Plan</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="card p-8 relative">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Enterprise</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$79</div>
+                        <div class="text-text-secondary">/month</div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">Unlimited queries</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">Team management</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">Custom integrations</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-primary">Dedicated support</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-accent w-full">Upgrade to Enterprise</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Recommendation Engine -->
+    <section class="py-12 bg-gradient-to-br from-accent-50 to-primary-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-primary mb-4">AI Plan Recommendation</h2>
+                <p class="text-xl text-text-secondary">Based on your usage patterns, we recommend the optimal plan for you</p>
+            </div>
+
+            <div class="card p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold text-primary mb-4">Your Usage Analysis</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Average monthly queries:</span>
+                                <span class="text-text-primary font-semibold">2,847</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Peak usage day:</span>
+                                <span class="text-text-primary font-semibold">Thursday</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Most used AI:</span>
+                                <span class="text-text-primary font-semibold">ChatGPT (44%)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Automation usage:</span>
+                                <span class="text-text-primary font-semibold">Medium</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Growth trend:</span>
+                                <span class="text-success font-semibold">+15% monthly</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-primary mb-4">Recommendation</h3>
+                        <div class="bg-accent-100 rounded-lg p-6 mb-4">
+                            <div class="flex items-center gap-3 mb-3">
+                                <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="font-semibold text-accent">Stay on Professional</span>
+                            </div>
+                            <p class="text-text-secondary mb-4">Your current plan perfectly matches your usage. With 57% of your query limit used and growing usage, you have room to grow without overpaying.</p>
+                            <div class="text-sm text-success font-semibold">Perfect fit - No change needed</div>
+                        </div>
+
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-secondary">Optimal cost efficiency</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-secondary">Room for 76% growth</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-secondary">All features you need</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Billing History & Transparency -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Billing History -->
+                <div>
+                    <h2 class="text-2xl font-bold text-primary mb-6">Billing History</h2>
+                    <div class="card p-6">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between py-3 border-b border-border-light">
+                                <div>
+                                    <div class="font-semibold text-text-primary">March 2025</div>
+                                    <div class="text-sm text-text-secondary">Professional Plan</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="font-semibold text-text-primary">$29.00</div>
+                                    <div class="text-sm text-success">Paid</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between py-3 border-b border-border-light">
+                                <div>
+                                    <div class="font-semibold text-text-primary">February 2025</div>
+                                    <div class="text-sm text-text-secondary">Professional Plan</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="font-semibold text-text-primary">$29.00</div>
+                                    <div class="text-sm text-success">Paid</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between py-3 border-b border-border-light">
+                                <div>
+                                    <div class="font-semibold text-text-primary">January 2025</div>
+                                    <div class="text-sm text-text-secondary">Starter Plan</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="font-semibold text-text-primary">$13.00</div>
+                                    <div class="text-sm text-success">Paid</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between py-3">
+                                <div>
+                                    <div class="font-semibold text-text-primary">December 2024</div>
+                                    <div class="text-sm text-text-secondary">Free Trial</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="font-semibold text-text-primary">$0.00</div>
+                                    <div class="text-sm text-text-secondary">Trial</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-secondary w-full mt-6">Download All Invoices</button>
+                    </div>
+                </div>
+
+                <!-- Cost Breakdown -->
+                <div>
+                    <h2 class="text-2xl font-bold text-primary mb-6">Cost Breakdown</h2>
+                    <div class="card p-6">
+                        <h3 class="font-semibold text-text-primary mb-4">March 2025 Invoice</h3>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Base subscription:</span>
+                                <span class="text-text-primary">$29.00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Usage overages:</span>
+                                <span class="text-text-primary">$0.00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Taxes:</span>
+                                <span class="text-text-primary">$0.00</span>
+                            </div>
+                            <div class="border-t border-border pt-3">
+                                <div class="flex justify-between font-semibold">
+                                    <span class="text-text-primary">Total:</span>
+                                    <span class="text-text-primary">$29.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-success-50 rounded-lg p-4 mb-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="font-semibold text-success">You saved $31 this month</span>
+                            </div>
+                            <p class="text-sm text-text-secondary">vs. individual ChatGPT ($20) + Claude ($20) + Gemini ($20) subscriptions</p>
+                        </div>
+
+                        <button class="btn-accent w-full">Download Invoice</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Management (Business Plans) -->
+    <section class="py-12 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-primary mb-4">Team Management</h2>
+                <p class="text-xl text-text-secondary">Upgrade to Enterprise for advanced team collaboration features</p>
+            </div>
+
+            <div class="card p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold text-primary mb-4">Enterprise Features</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-primary">User access controls and permissions</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-primary">Team usage monitoring and analytics</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-primary">Shared workflows and templates</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-primary">Centralized billing and reporting</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-text-primary">SSO integration and security controls</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary mb-4">Ready for Team Collaboration?</h3>
+                        <p class="text-text-secondary mb-6">Upgrade to Enterprise and unlock powerful team management features for your organization.</p>
+                        <button class="btn-primary">Upgrade to Enterprise</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-text-secondary">Everything you need to know about billing and subscriptions</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card p-6">
+                    <h3 class="font-semibold text-text-primary mb-2">How does billing work?</h3>
+                    <p class="text-text-secondary">You're billed monthly on the same date you started your subscription. All charges are processed automatically using your saved payment method.</p>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="font-semibold text-text-primary mb-2">Can I change my plan anytime?</h3>
+                    <p class="text-text-secondary">Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate the billing accordingly.</p>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="font-semibold text-text-primary mb-2">What happens if I exceed my usage limits?</h3>
+                    <p class="text-text-secondary">We'll notify you when you're approaching your limits. You can either upgrade your plan or purchase additional usage credits to continue using the service.</p>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="font-semibold text-text-primary mb-2">Do you offer refunds?</h3>
+                    <p class="text-text-secondary">We offer a 30-day money-back guarantee for new subscribers. If you're not satisfied, contact our support team for a full refund.</p>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="font-semibold text-text-primary mb-2">How do I cancel my subscription?</h3>
+                    <p class="text-text-secondary">You can cancel anytime from your account settings. Your subscription will remain active until the end of your current billing period.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Success Contact -->
+    <section class="py-12 bg-gradient-to-br from-primary-50 to-accent-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-primary mb-4">Need Help with Your Subscription?</h2>
+            <p class="text-xl text-text-secondary mb-8">Our customer success team is here to help you optimize your AI investment</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-primary mb-2">Email Support</h3>
+                    <p class="text-text-secondary mb-4">Get detailed help with billing questions and account management</p>
+                    <button class="btn-secondary">Contact Support</button>
+                </div>
+
+                <div class="card p-6">
+                    <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-primary mb-2">Schedule a Call</h3>
+                    <p class="text-text-secondary mb-4">Talk directly with a customer success manager about your needs</p>
+                    <button class="btn-accent">Book a Call</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                            <circle cx="16" cy="12" r="3" fill="white"/>
+                            <path d="M16 16l-4 4h8l-4-4z" fill="white"/>
+                        </svg>
+                        <span class="ml-3 text-xl font-bold">AI Nexus Pro</span>
+                    </div>
+                    <p class="text-white/80 mb-4">The unified AI platform that consolidates ChatGPT, Claude, and Gemini into one powerful interface.</p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-white/60 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-white/60 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-white/60 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="ai_comparison_studio.html" class="text-white/80 hover:text-white transition-colors">AI Comparison Studio</a></li>
+                        <li><a href="unified_dashboard.html" class="text-white/80 hover:text-white transition-colors">Unified Dashboard</a></li>
+                        <li><a href="automation_studio.html" class="text-white/80 hover:text-white transition-colors">Automation Studio</a></li>
+                        <li><a href="subscription_management.html" class="text-white/80 hover:text-white transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="knowledge_base.html" class="text-white/80 hover:text-white transition-colors">Knowledge Base</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-white transition-colors">API Documentation</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-white transition-colors">Community</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/60">© 2025 AI Nexus Pro. All rights reserved.</p>
+                <div class="flex items-center gap-4 mt-4 md:mt-0">
+                    <span class="text-white/60 text-sm">SOC 2 Compliant</span>
+                    <span class="text-white/60 text-sm">GDPR Ready</span>
+                    <span class="text-white/60 text-sm">Enterprise Security</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unified Dashboard - AI Nexus Pro</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Your central command center for managing all AI services, conversations, and workflows in one unified interface." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fainexusp5621back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <nav class="bg-surface shadow-card border-b border-border-light sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                            <circle cx="16" cy="12" r="3" fill="white"/>
+                            <path d="M16 16l-4 4h8l-4-4z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-primary">AI Nexus Pro</h1>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Home</a>
+                        <a href="ai_comparison_studio.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">AI Studio</a>
+                        <a href="unified_dashboard.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">Dashboard</a>
+                        <a href="automation_studio.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Automation</a>
+                        <a href="subscription_management.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Pricing</a>
+                        <a href="knowledge_base.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Knowledge Base</a>
+                    </div>
+                </div>
+
+                <!-- User Menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-text-secondary hover:text-primary p-2 rounded-md transition-colors">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-12"/>
+                        </svg>
+                    </button>
+                    <button class="text-text-secondary hover:text-primary p-2 rounded-md transition-colors">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-12"/>
+                        </svg>
+                    </button>
+                    <div class="flex items-center gap-3">
+                        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="User Avatar" class="w-8 h-8 rounded-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <span class="text-sm font-medium text-text-primary">Sarah Chen</span>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-text-secondary hover:text-primary p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-64 bg-surface shadow-card border-r border-border-light">
+            <div class="p-6">
+                <!-- Quick Actions -->
+                <div class="mb-8">
+                    <h3 class="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-4">Quick Actions</h3>
+                    <div class="space-y-2">
+                        <button class="w-full flex items-center gap-3 px-3 py-2 text-left text-text-primary hover:bg-primary-50 rounded-lg transition-colors">
+                            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm">New Conversation</span>
+                        </button>
+                        <button class="w-full flex items-center gap-3 px-3 py-2 text-left text-text-primary hover:bg-primary-50 rounded-lg transition-colors">
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm">Prompt Templates</span>
+                        </button>
+                        <button class="w-full flex items-center gap-3 px-3 py-2 text-left text-text-primary hover:bg-primary-50 rounded-lg transition-colors">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm">Workflow Builder</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="mb-8">
+                    <h3 class="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-4">Navigation</h3>
+                    <div class="space-y-1">
+                        <a href="unified_dashboard.html" class="flex items-center gap-3 px-3 py-2 text-primary bg-primary-50 rounded-lg font-medium">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                            </svg>
+                            <span class="text-sm">Dashboard</span>
+                        </a>
+                        <a href="ai_comparison_studio.html" class="flex items-center gap-3 px-3 py-2 text-text-secondary hover:text-primary hover:bg-primary-50 rounded-lg transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01.293.707V12a1 1 0 102 0V8a1 1 0 01.293-.707L13.586 5H12a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293A1 1 0 0112 9v3a3 3 0 11-6 0V9a1 1 0 01.293-.707L8.586 6.414 6.293 4.121A1 1 0 015.707 2.707L7.414 4.414 9.707 2.121a1 1 0 011.414 1.414L8.828 6.828 6.535 9.121A1 1 0 016 10v2a1 1 0 102 0v-1.586l1.293-1.293A1 1 0 0110 9V6.414l1.293-1.293A1 1 0 0112 4V3z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm">AI Studio</span>
+                        </a>
+                        <a href="automation_studio.html" class="flex items-center gap-3 px-3 py-2 text-text-secondary hover:text-primary hover:bg-primary-50 rounded-lg transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm">Automation</span>
+                        </a>
+                        <a href="subscription_management.html" class="flex items-center gap-3 px-3 py-2 text-text-secondary hover:text-primary hover:bg-primary-50 rounded-lg transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm">Pricing</span>
+                        </a>
+                        <a href="knowledge_base.html" class="flex items-center gap-3 px-3 py-2 text-text-secondary hover:text-primary hover:bg-primary-50 rounded-lg transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+                            </svg>
+                            <span class="text-sm">Knowledge Base</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Keyboard Shortcuts -->
+                <div class="mb-8">
+                    <h3 class="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-4">Shortcuts</h3>
+                    <div class="space-y-2 text-xs text-text-secondary">
+                        <div class="flex justify-between">
+                            <span>New Chat</span>
+                            <kbd class="px-2 py-1 bg-gray-100 rounded text-xs">⌘ N</kbd>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Search</span>
+                            <kbd class="px-2 py-1 bg-gray-100 rounded text-xs">⌘ K</kbd>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Switch AI</span>
+                            <kbd class="px-2 py-1 bg-gray-100 rounded text-xs">⌘ ⇧ A</kbd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-hidden">
+            <!-- Header Section -->
+            <div class="bg-gradient-to-r from-primary-50 to-accent-50 border-b border-border-light">
+                <div class="px-6 py-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h1 class="text-3xl font-bold text-primary mb-2">Good morning, Sarah! 👋</h1>
+                            <p class="text-text-secondary">Ready to tackle your AI-powered workflows today?</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm text-text-secondary mb-1">Today's Savings</div>
+                            <div class="text-2xl font-bold text-success">$2.47</div>
+                            <div class="text-xs text-text-secondary">vs. individual subscriptions</div>
+                        </div>
+                    </div>
+
+                    <!-- AI Switcher Bar -->
+                    <div class="card p-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-primary">AI Command Center</h3>
+                            <div class="flex items-center gap-2 text-sm text-text-secondary">
+                                <div class="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                                <span>All models online</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-3 mb-4">
+                            <button class="ai-model-btn active flex-1 bg-primary text-white px-4 py-3 rounded-lg font-medium transition-all" data-model="chatgpt">
+                                <div class="flex items-center justify-center gap-2">
+                                    <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                                        <span class="text-white text-xs font-bold">GPT</span>
+                                    </div>
+                                    <span>ChatGPT</span>
+                                </div>
+                            </button>
+                            <button class="ai-model-btn flex-1 bg-gray-100 text-text-secondary px-4 py-3 rounded-lg font-medium transition-all hover:bg-gray-200" data-model="claude">
+                                <div class="flex items-center justify-center gap-2">
+                                    <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                                        <span class="text-white text-xs font-bold">C</span>
+                                    </div>
+                                    <span>Claude</span>
+                                </div>
+                            </button>
+                            <button class="ai-model-btn flex-1 bg-gray-100 text-text-secondary px-4 py-3 rounded-lg font-medium transition-all hover:bg-gray-200" data-model="gemini">
+                                <div class="flex items-center justify-center gap-2">
+                                    <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <span class="text-white text-xs font-bold">G</span>
+                                    </div>
+                                    <span>Gemini</span>
+                                </div>
+                            </button>
+                        </div>
+
+                        <!-- Context Preservation Indicator -->
+                        <div class="flex items-center gap-2 text-sm text-success bg-success-50 px-3 py-2 rounded-lg">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Context preserved across all AI models</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="p-6 overflow-y-auto" style="height: calc(100vh - 280px);">
+                <div class="grid lg:grid-cols-3 gap-6">
+                    <!-- Left Column -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <!-- Usage Overview -->
+                        <div class="card p-6">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-lg font-semibold text-primary">Today's Activity</h3>
+                                <button class="text-accent hover:text-accent-700 text-sm font-medium">View Details</button>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-3 gap-4 mb-6">
+                                <div class="text-center p-4 bg-accent-50 rounded-lg">
+                                    <div class="text-2xl font-bold text-accent mb-1">47</div>
+                                    <div class="text-sm text-text-secondary">Queries Processed</div>
+                                </div>
+                                <div class="text-center p-4 bg-success-50 rounded-lg">
+                                    <div class="text-2xl font-bold text-success mb-1">3</div>
+                                    <div class="text-sm text-text-secondary">Workflows Completed</div>
+                                </div>
+                                <div class="text-center p-4 bg-warning-50 rounded-lg">
+                                    <div class="text-2xl font-bold text-warning mb-1">2.4h</div>
+                                    <div class="text-sm text-text-secondary">Time Saved</div>
+                                </div>
+                            </div>
+
+                            <!-- AI Model Usage Chart -->
+                            <div class="mb-4">
+                                <h4 class="text-sm font-semibold text-text-secondary mb-3">AI Model Usage Distribution</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                            <span class="text-sm text-text-primary">ChatGPT</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                                <div class="w-3/5 h-full bg-green-500"></div>
+                                            </div>
+                                            <span class="text-sm text-text-secondary w-8">60%</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                            <span class="text-sm text-text-primary">Claude</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                                <div class="w-1/3 h-full bg-orange-500"></div>
+                                            </div>
+                                            <span class="text-sm text-text-secondary w-8">25%</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                            <span class="text-sm text-text-primary">Gemini</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                                <div class="w-1/6 h-full bg-blue-500"></div>
+                                            </div>
+                                            <span class="text-sm text-text-secondary w-8">15%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Conversations -->
+                        <div class="card p-6">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-lg font-semibold text-primary">Recent Conversations</h3>
+                                <div class="flex items-center gap-2">
+                                    <button class="p-2 text-text-secondary hover:text-primary rounded-lg hover:bg-gray-50 transition-colors">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 text-text-secondary hover:text-primary rounded-lg hover:bg-gray-50 transition-colors">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <!-- Conversation Item -->
+                                <div class="flex items-start gap-4 p-4 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer">
+                                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <span class="text-white text-xs font-bold">GPT</span>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <h4 class="text-sm font-medium text-text-primary truncate">Marketing Strategy for SaaS Product</h4>
+                                            <span class="text-xs text-text-secondary flex-shrink-0">2 hours ago</span>
+                                        </div>
+                                        <p class="text-sm text-text-secondary line-clamp-2">Comprehensive marketing approach focusing on target audience identification, content strategy, and growth metrics...</p>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">Marketing</span>
+                                            <span class="px-2 py-1 bg-success-100 text-success text-xs rounded-full">Strategy</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Conversation Item -->
+                                <div class="flex items-start gap-4 p-4 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer">
+                                    <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <span class="text-white text-xs font-bold">C</span>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <h4 class="text-sm font-medium text-text-primary truncate">Code Review and Optimization</h4>
+                                            <span class="text-xs text-text-secondary flex-shrink-0">4 hours ago</span>
+                                        </div>
+                                        <p class="text-sm text-text-secondary line-clamp-2">Detailed analysis of React component performance with suggestions for optimization and best practices...</p>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <span class="px-2 py-1 bg-warning-100 text-warning text-xs rounded-full">Development</span>
+                                            <span class="px-2 py-1 bg-error-100 text-error text-xs rounded-full">Code Review</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Conversation Item -->
+                                <div class="flex items-start gap-4 p-4 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer">
+                                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <span class="text-white text-xs font-bold">G</span>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <h4 class="text-sm font-medium text-text-primary truncate">Data Analysis and Visualization</h4>
+                                            <span class="text-xs text-text-secondary flex-shrink-0">Yesterday</span>
+                                        </div>
+                                        <p class="text-sm text-text-secondary line-clamp-2">Statistical analysis of user engagement metrics with recommendations for dashboard improvements...</p>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <span class="px-2 py-1 bg-primary-100 text-primary text-xs rounded-full">Analytics</span>
+                                            <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">Data Science</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="w-full mt-4 text-accent hover:text-accent-700 text-sm font-medium py-2 border border-accent-200 rounded-lg hover:bg-accent-50 transition-colors">
+                                View All Conversations
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="space-y-6">
+                        <!-- Active Projects -->
+                        <div class="card p-6">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-lg font-semibold text-primary">Active Projects</h3>
+                                <button class="text-accent hover:text-accent-700 text-sm font-medium">Manage</button>
+                            </div>
+
+                            <div class="space-y-4">
+                                <!-- Project Card -->
+                                <div class="p-4 border border-border-light rounded-lg hover:shadow-subtle transition-shadow">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h4 class="text-sm font-medium text-text-primary">Website Redesign</h4>
+                                        <span class="text-xs text-success bg-success-100 px-2 py-1 rounded-full">Active</span>
+                                    </div>
+                                    <p class="text-xs text-text-secondary mb-3">UX research and content strategy</p>
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                                            <span class="text-white text-xs font-bold">GPT</span>
+                                        </div>
+                                        <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                                            <span class="text-white text-xs font-bold">C</span>
+                                        </div>
+                                        <span class="text-xs text-text-secondary">2 AI models</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="w-3/4 h-full bg-success"></div>
+                                    </div>
+                                    <div class="text-xs text-text-secondary mt-1">75% complete</div>
+                                </div>
+
+                                <!-- Project Card -->
+                                <div class="p-4 border border-border-light rounded-lg hover:shadow-subtle transition-shadow">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h4 class="text-sm font-medium text-text-primary">Content Calendar</h4>
+                                        <span class="text-xs text-warning bg-warning-100 px-2 py-1 rounded-full">Planning</span>
+                                    </div>
+                                    <p class="text-xs text-text-secondary mb-3">Q1 2025 social media strategy</p>
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                                            <span class="text-white text-xs font-bold">GPT</span>
+                                        </div>
+                                        <span class="text-xs text-text-secondary">1 AI model</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="w-1/3 h-full bg-warning"></div>
+                                    </div>
+                                    <div class="text-xs text-text-secondary mt-1">30% complete</div>
+                                </div>
+                            </div>
+
+                            <button class="w-full mt-4 text-accent hover:text-accent-700 text-sm font-medium py-2 border border-accent-200 rounded-lg hover:bg-accent-50 transition-colors">
+                                Create New Project
+                            </button>
+                        </div>
+
+                        <!-- Automation Workflows -->
+                        <div class="card p-6">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-lg font-semibold text-primary">Active Workflows</h3>
+                                <button class="text-accent hover:text-accent-700 text-sm font-medium">View All</button>
+                            </div>
+
+                            <div class="space-y-4">
+                                <!-- Workflow Item -->
+                                <div class="flex items-center gap-3 p-3 bg-success-50 rounded-lg">
+                                    <div class="w-8 h-8 bg-success rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-sm font-medium text-text-primary">Content Generation</h4>
+                                        <p class="text-xs text-text-secondary">Completed 2 minutes ago</p>
+                                    </div>
+                                </div>
+
+                                <!-- Workflow Item -->
+                                <div class="flex items-center gap-3 p-3 bg-accent-50 rounded-lg">
+                                    <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                                        <div class="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-sm font-medium text-text-primary">Market Research</h4>
+                                        <p class="text-xs text-text-secondary">Running... 45% complete</p>
+                                    </div>
+                                </div>
+
+                                <!-- Workflow Item -->
+                                <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 012 0v4a1 1 0 11-2 0V7zM8 13a1 1 0 112 0 1 1 0 01-2 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-sm font-medium text-text-primary">Code Documentation</h4>
+                                        <p class="text-xs text-text-secondary">Scheduled for 3:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notifications -->
+                        <div class="card p-6">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-lg font-semibold text-primary">Notifications</h3>
+                                <button class="text-accent hover:text-accent-700 text-sm font-medium">Mark All Read</button>
+                            </div>
+
+                            <div class="space-y-3">
+                                <!-- Notification Item -->
+                                <div class="flex items-start gap-3 p-3 bg-accent-50 rounded-lg">
+                                    <div class="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                                    <div class="flex-1">
+                                        <p class="text-sm text-text-primary">ChatGPT model updated to GPT-4 Turbo</p>
+                                        <p class="text-xs text-text-secondary">5 minutes ago</p>
+                                    </div>
+                                </div>
+
+                                <!-- Notification Item -->
+                                <div class="flex items-start gap-3 p-3 bg-success-50 rounded-lg">
+                                    <div class="w-2 h-2 bg-success rounded-full mt-2 flex-shrink-0"></div>
+                                    <div class="flex-1">
+                                        <p class="text-sm text-text-primary">Workflow "Content Generation" completed successfully</p>
+                                        <p class="text-xs text-text-secondary">2 minutes ago</p>
+                                    </div>
+                                </div>
+
+                                <!-- Notification Item -->
+                                <div class="flex items-start gap-3 p-3 bg-warning-50 rounded-lg">
+                                    <div class="w-2 h-2 bg-warning rounded-full mt-2 flex-shrink-0"></div>
+                                    <div class="flex-1">
+                                        <p class="text-sm text-text-primary">Approaching monthly usage limit (85%)</p>
+                                        <p class="text-xs text-text-secondary">1 hour ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // AI Model Switcher
+        document.addEventListener('DOMContentLoaded', function() {
+            const aiButtons = document.querySelectorAll('.ai-model-btn');
+            
+            aiButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active state from all buttons
+                    aiButtons.forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white', 'active');
+                        btn.classList.add('bg-gray-100', 'text-text-secondary');
+                    });
+                    
+                    // Add active state to clicked button
+                    this.classList.remove('bg-gray-100', 'text-text-secondary');
+                    this.classList.add('bg-primary', 'text-white', 'active');
+                    
+                    // Add animation
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 100);
+                });
+            });
+
+            // Simulate real-time updates
+            setInterval(() => {
+                const queryCount = document.querySelector('.text-2xl.font-bold.text-accent');
+                if (queryCount) {
+                    const current = parseInt(queryCount.textContent);
+                    queryCount.textContent = current + Math.floor(Math.random() * 3);
+                }
+            }, 30000);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
